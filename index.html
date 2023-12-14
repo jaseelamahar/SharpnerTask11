@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<title>Objects in local Storage</title>
+<link rel="stylsheet" href=""http://youtube.local/assets/dcode.css">
+<link rel=""shortcut icon" href="http://youtube.local/assets/favicon.ico">
+<style media="screen"></style>
+<body>
+    <h2 id="title">Objects in local storage-Javascript-decode</h2>
+</body>
+<script type="text/javascript">
+myobj={
+    name:"Dominic",
+    age:56
+}
+let myobj_serialised=JSON.stringify(myobj);
+console.log(myobj_serialised)
+
+localStorage.setItem("myobj",myobj_serialised);
+
+let myobj_deserialised=JSON.parse(localStorage.getItem("myobj"))
+console.log(myobj_deserialised)
+console.log(localStorage);
+
+
+
+
+</script>
+
+    
